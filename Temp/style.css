@@ -1,0 +1,68 @@
+.grid-container {
+    display:grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 1em;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+#mainContent{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
+    grid-row-gap: 1em;
+    grid-template-areas: 
+        ". . . . ghost ghost ghost ghost . . . ."
+        ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ."
+        ". . form form form form form form form form . ."
+        ". . haunt haunt haunt haunt haunt haunt haunt haunt . ."
+}
+
+.grid-item-1 {
+    grid-area: header;
+}
+
+.grid-item-2{
+    grid-area: ghost;
+}
+
+.grid-item-3{
+    grid-area: ghostShadow;
+} 
+
+.grid-item-4{
+    grid-area: form;
+}
+
+.grid-item-5{
+    grid-area: haunt;
+}
+
+.grid-item-6{
+    grid-area: footer;
+}
+
+.grid-item-7{
+    grid-area: main;
+}
+
+
+
+
+
+/* Background Styles Only */
+
+body {
+    background-color: #16242D;
+    margin: 0;
+	padding: 0;
+  }
+
+
+
+
+
+
+
