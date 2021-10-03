@@ -1,10 +1,16 @@
 let isReady = true
 
+var chosenFace 
+
+var actualGhost = document.getElementById("actualGhost");
+
 var gravestones = document.getElementsByClassName("gravestone");
 
 for (var i = 0; i < gravestones.length; i++) {
     gravestones[i].addEventListener('click', displayRandomHaunt, false);
 }
+
+actualGhost.addEventListener('click', displayRandomFace, false);
 
 function displayRandomHaunt() {
     if (!isReady) return
@@ -37,4 +43,14 @@ function displayRandomHaunt() {
         text.classList.remove("fade-in");
         isReady = true;
       },choosenHaunt.length * 100); // Set time out to three seconds to account for the second the element fades in
+  }
+
+function displayRandomFace() {
+    if (typeof chosenFace !== 'undefined'){
+        chosenFace.classList.remove("fade-in");
+    }; 
+    let faces = document.getElementsByClassName("ghostFace");
+    let randNum = Math.floor(Math.random() * faces.length);
+    chosenFace = faces[randNum]
+    chosenFace.classList.add("fade-in");
   }

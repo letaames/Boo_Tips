@@ -25,6 +25,15 @@
     grid-area: header;
 }
 
+.ghostFace{
+    opacity: 0;
+    transition: 1s;
+}
+
+.ghostFace.fade-in {
+    opacity: 1;
+    transition: 1s;
+  }
 /* Begin ghost face */
 /* #ghostFace { */
     /* z-index:1; */
