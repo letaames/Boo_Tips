@@ -24,9 +24,20 @@
 .grid-item-1 {
     grid-area: header;
 }
+
+/* Begin ghost face */
+/* #ghostFace { */
+    /* z-index:1; */
+    /* text-align:center; */
+    /* transform:translateY(5px); */
+    /* animation: floaty 2s infinite ease-in-out; */
+    /* position:absolute; */
+/* } */
+
 /* Begin ghost float */
 .grid-item-2{
     grid-area: ghost;
+    /* position:relative; */
 }
 
 .floatGhost{
@@ -34,8 +45,10 @@
   }
 
 #actualGhost {
+    /* position:absolute; */
     transform:translateY(5px);
     animation: floaty 2s infinite ease-in-out;
+    z-index: -1
 }
 
 @keyframes floaty {
