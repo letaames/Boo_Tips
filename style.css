@@ -1,13 +1,15 @@
 .grid-container {
+    background-color: #16242D;
     display:grid;
     grid-template-columns: 1fr; 
     grid-template-rows: auto 1fr auto;
-    grid-row-gap: 1em;
+    /* grid-row-gap: 1em; */
     grid-template-areas: 
     "header"
     "main"
     "footer";
-    background-color: #16242D;
+    /* padding:0; */
+    /* margin: 0; */
 }
 
 #mainContent{
@@ -141,6 +143,7 @@
 .grid-item-6{
     grid-area: footer;
     align-self: end;
+
 }
 
 .gravestone {
@@ -173,13 +176,14 @@ body {
 }
 
 .grid-item {
+    background-color: #16242D;
     /* position: relative; */
     /* font-size: 25px; */
     padding: 2em;
     /* padding-top: 50px; */
     /* background-color: #379AD6; */
     /* color: #222; */
-    border: 1px solid white;
+    /* border: 1px solid white; */
   }
 
 
