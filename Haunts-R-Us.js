@@ -1,6 +1,8 @@
-let isReady = true
+let previousNum;
 
-var chosenFace 
+let isReady = true;
+
+var chosenFace;
 
 var actualGhost = document.getElementById("actualGhost");
 
@@ -51,6 +53,11 @@ function displayRandomFace() {
     }; 
     let faces = document.getElementsByClassName("ghostFace");
     let randNum = Math.floor(Math.random() * faces.length);
-    chosenFace = faces[randNum]
+    while (randNum === previousNum) {
+        randNum=Math.floor(Math.random() * faces.length)
+    }
+    previousNum = randNum;
+    console.log(previousNum)
+    chosenFace = faces[randNum];
     chosenFace.classList.add("fade-in");
   }
