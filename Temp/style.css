@@ -13,11 +13,12 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
     grid-row-gap: 1em;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: 
         ". . . . ghost ghost ghost ghost . . . ."
-        ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ."
+        /* ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ." */
         ". . form form form form form form form form . ."
-        ". haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt ."
+        "haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt"
 }
 
 .grid-item-1 {
@@ -103,11 +104,13 @@
 
   .bigDisplay{
     text-align: center;
+    /* position: absolute; */
+    /* bottom: 0; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     /* height: 200px; */
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
 
