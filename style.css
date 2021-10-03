@@ -7,12 +7,13 @@
     "header"
     "main"
     "footer";
+    background-color: #16242D;
 }
 
 #mainContent{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
-    grid-row-gap: 1em;
+    /* grid-row-gap: 1em; */
     grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: 
         ". . . . ghost ghost ghost ghost . . . ."
@@ -160,8 +161,13 @@
 
 /* Background Styles Only */
 
+html {
+    margin: 0;
+	padding: 0;
+}
+
 body {
-    background-color: #16242D;
+    background-color: #000000;
     margin: 0;
 	padding: 0;
 }
