@@ -1,5 +1,5 @@
 .grid-container {
-    background-color: white;
+    background-color: #16242D;
     display:grid;
     grid-template-columns: 1fr; 
     grid-template-rows: auto 1fr auto ;
@@ -61,7 +61,7 @@
     /* position:absolute; */
     transform:translateY(5px);
     animation: floaty 2s infinite ease-in-out;
-    z-index: -1
+    /* z-index: -1 */
 }
 
 @keyframes floaty {
@@ -144,7 +144,7 @@
 .grid-item-6{
     grid-area: footer;
     align-self: end;
-    display: flex;
+    /* display: flex; */
 
 }
 
