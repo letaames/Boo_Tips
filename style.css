@@ -160,6 +160,14 @@
     opacity: 0.3;
 }
 
+.chosen{
+    background-color: black;
+}
+
+.disabled{
+    opacity: 0.3;
+}
+
 .controls{
     display:grid;
     grid-template-areas:
