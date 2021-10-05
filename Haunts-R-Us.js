@@ -8,6 +8,8 @@ var actualGhost = document.getElementById("actualGhost");
 
 var gravestones = document.getElementsByClassName("gravestone");
 
+
+
 for (var i = 0; i < gravestones.length; i++) {
     gravestones[i].addEventListener('click', displayRandomHaunt, false);
 }
@@ -61,3 +63,6 @@ function displayRandomFace() {
     chosenFace = faces[randNum];
     chosenFace.classList.add("fade-in");
   }
+
+
+

@@ -2,7 +2,7 @@
     background-color: #16242D;
     display:grid;
     grid-template-columns: 1fr; 
-    grid-template-rows: auto 1fr auto ;
+    /* grid-template-rows: auto 1fr auto ; */
     /* grid-row-gap: 1em; */
     grid-template-areas: 
     "header"
@@ -16,7 +16,7 @@
 #mainContent{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ; 
-    /* grid-row-gap: 1em; */
+    grid-row-gap: 1em;
     grid-template-rows: 2fr 1fr 1fr;
     grid-template-areas: 
         ". . . . ghost ghost ghost ghost . . . ."
@@ -108,6 +108,73 @@
 .grid-item-4{
     grid-area: form;
 }
+
+/* .form-card { */
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* transition: 0.3s; */
+    /* background-color: #EFF1F0; */
+    /* box-sizing: border-box; */
+    /* margin:0; */
+    /* padding:0; */
+    /* width: 100%; */
+        /* height: 100%; */
+
+/* } */
+
+/* .form-card:hover { */
+    /* transform: scale(1.1); */
+/* } */
+
+.form-container{
+    width: 60vw;
+    /* max-width: 80%; */
+    background-color: #EFF1F0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px;
+    text-align: center;
+  }
+.answerGrid {
+    grid-area: answers;
+    display:grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.btn {
+    background-color: aqua;
+    border-radius: 5px;
+    border: 1px solid green;
+    padding: 5px 10px;
+    outline: none;
+    color: white;
+}
+
+.btn:hover{
+    border-color: teal;
+    transform: scale(1.05)
+}
+
+.btn:disabled{
+    opacity: 0.3;
+}
+
+.controls{
+    display:grid;
+    grid-template-areas:
+    "goBack questions goForward"
+    "goBack answers goForward"
+}
+
+#question {
+    grid-area: questions;
+}
+
+.hide {
+    display: none;
+}
+
 /* Begin haunt */
 .grid-item-5{
     grid-area: haunt;
@@ -165,6 +232,10 @@
 
 
 /* Background Styles Only */
+
+*::before, *::after{
+    box-sizing: border-box;
+}
 
 html {
     margin: 0;
