@@ -183,6 +183,34 @@
     display: none;
 }
 
+#scoreDisplayContainer{ 
+    display:grid;
+    grid-template-columns: 1fr; 
+    /* grid-template-rows: auto 1fr auto ; */
+    /* grid-row-gap: 1em; */
+    grid-template-areas: 
+    "intro"
+    "hauntScore"
+    "units";
+}
+
+#intro {
+    grid-area: intro;
+}
+
+#scoreDisplay {
+    grid-area: hauntScore;
+}
+
+#units {
+    grid-area: units;
+}
+
+.spookyFontTwo{
+    font-family: 'Creepster', cursive;
+    color: black;
+}
+
 /* Begin haunt */
 .grid-item-5{
     grid-area: haunt;

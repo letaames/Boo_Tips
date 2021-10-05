@@ -24,6 +24,14 @@ var finalAnswerList = [];
 
 var answerButtons = document.getElementsByClassName("answerButton");
 
+let calculatedScore = 0;
+
+var scoreDisplay = document.getElementById("scoreDisplay");
+
+var scoreDisplayContainer = document.getElementById("scoreDisplayContainer");
+
+var displayTexts = document.getElementsByClassName("displayText");
+
 
 const questions = [
     "What is 2+2?", "What is my birthday?"
@@ -58,7 +66,7 @@ function setNextQuestion() {
 }
 
 function goToNext() {
-    selectedButton = document.getElementsByClassName('chosen')[0].id.split("-")[1];
+    selectedButton = Number(document.getElementsByClassName('chosen')[0].id.split("-")[1]);
     finalAnswerList.push(selectedButton);
     currentQuestion++;
     Array.from(answerButtons).forEach(button => {
@@ -77,7 +85,8 @@ function goToNext() {
 
 
 function collectAnswer(answerListLength, buttonID) {
-    buttonInteger = buttonID.split("-")[1]
+    buttonInteger = Number(buttonID.split("-")[1]);
+    console.log(buttonInteger)
     for (var i = 0; i < answerListLength; i++) {
         if (i == buttonInteger) {
             answerButtons[i].classList.add('chosen');
@@ -94,10 +103,8 @@ function collectAnswer(answerListLength, buttonID) {
 }
 
 function moveOn() {
-    debugger;
-    console.log(questions.length-currentQuestion==1);
+    // debugger;
     if (questions.length-currentQuestion==1) {
-        console.log("in here")
         finishButton.classList.remove('hide');
         nextButton.classList.add('hide')
     }
@@ -108,7 +115,7 @@ function moveOn() {
 
 
 function endGame() {
-        selectedButton = document.getElementsByClassName('chosen')[0].id.split("-")[1];
+        selectedButton = Number(document.getElementsByClassName('chosen')[0].id.split("-")[1]);
         finalAnswerList.push(selectedButton);
         gameStarted = false;
         Array.from(allButtons).forEach(button => {
@@ -119,5 +126,16 @@ function endGame() {
     }
 
 function calculateScore() {
-    console.log(finalAnswerList.reduce((a, b) => a + b, 0));
+    calculatedScore = 0
+    calculatedScore = calculatedScore + finalAnswerList[0] * 2;
+    calculatedScore = calculatedScore + finalAnswerList[1] + 2;
+    displayHauntScore(calculatedScore);
+}
+function displayHauntScore(calculatedScore) {
+    scoreDisplay.innerText = calculatedScore;
+    Array.from(displayTexts).forEach(section => {
+        section.classList.remove('hide');
+    });
+    scoreDisplay.classList.add("fade-in");
+    scoreDisplayContainer.classList.remove('hide');
 }
