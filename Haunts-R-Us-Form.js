@@ -2,13 +2,19 @@ let gameStarted = false;
 
 var currentQuestion = 0;
 
+var allButtons = document.getElementsByClassName("btn")
+
 var startButton = document.getElementById("startBtn");
 
 startButton.addEventListener('click', startGame);
 
 var nextButton = document.getElementById("nextBtn")
 
-nextBtn.addEventListener('click', goToNext);
+nextButton.addEventListener('click', goToNext);
+
+var finishButton = document.getElementById("finishBtn");
+
+finishButton.addEventListener('click',endGame);
 
 var questionContainerElement = document.getElementById("question-container");
 
@@ -33,7 +39,7 @@ function startGame() {
     startButton.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     gameStarted = true;
-    debugger;
+    // debugger;
     setNextQuestion()
 }
 
@@ -49,12 +55,10 @@ function setNextQuestion() {
             answerButtons[z].innerText = answerList[z];
         }
     }
-
-    gameStarted = false;
 }
 
 function goToNext() {
-    selectedButton = document.getElementsByClassName('chosen')
+    selectedButton = document.getElementsByClassName('chosen')[0].id.split("-")[1];
     finalAnswerList.push(selectedButton);
     currentQuestion++;
     Array.from(answerButtons).forEach(button => {
@@ -77,8 +81,8 @@ function collectAnswer(answerListLength, buttonID) {
     for (var i = 0; i < answerListLength; i++) {
         if (i == buttonInteger) {
             answerButtons[i].classList.add('chosen');
-            nextButton.classList.remove('hide');
-            answerButtons[i].classList.remove('disabled')
+            answerButtons[i].classList.remove('disabled');
+            moveOn();
         } else {
             answerButtons[i].classList.add('disabled');
             answerButtons[i].classList.remove('chosen');
@@ -89,3 +93,31 @@ function collectAnswer(answerListLength, buttonID) {
 
 }
 
+function moveOn() {
+    debugger;
+    console.log(questions.length-currentQuestion==1);
+    if (questions.length-currentQuestion==1) {
+        console.log("in here")
+        finishButton.classList.remove('hide');
+        nextButton.classList.add('hide')
+    }
+    else {
+        nextButton.classList.remove('hide');
+    }
+}
+
+
+function endGame() {
+        selectedButton = document.getElementsByClassName('chosen')[0].id.split("-")[1];
+        finalAnswerList.push(selectedButton);
+        gameStarted = false;
+        Array.from(allButtons).forEach(button => {
+            button.classList.add('hide');
+        });
+        question.classList.add('hide');
+        calculateScore()
+    }
+
+function calculateScore() {
+    console.log(finalAnswerList.reduce((a, b) => a + b, 0));
+}
