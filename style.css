@@ -115,9 +115,9 @@
     text-align: center;
 }
 
-#question-container {
+/* #question-container {
     font-size: 3vw;
-}
+} */
 .standardFont{
     font-family: 'Arvo', serif;
     color: black;
@@ -142,7 +142,7 @@
 .form-container{
     /* width: 60vw; */
     background-color: #EFF1F0;
-    /* padding: 5%; */
+    padding: 5%;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
     text-align: center;
@@ -153,16 +153,20 @@
     /* justify-content: center; */
   }
 #question-container{
-    padding: 5%;
+    font-size: 3vw;
+    /* padding: 5%; */
     display:grid;
     grid-template-columns: auto 2fr auto;
-    grid-template-rows: 1fr 1fr 1fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "q q q"
     "pb a nb"
     "pb a nb"
-    ". . ."
+    ". fb ."
     ;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
 }
 .answerGrid {
@@ -170,10 +174,10 @@
     display:grid;
     grid-template-columns: repeat(2, auto);
     gap: .5em;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: .25em;
+    padding-bottom: .25em;
     /* margin: 2em 0; */
 }
 
@@ -216,7 +220,7 @@
     /* grid-template-areas: */
     /* ". start start ." */
     /* ". goBack goBack ." */
-    ;
+    /* ; */
     /* grid-template-columns: 1fr 2fr 2fr 1fr; */
     /* gap: 2em; */
     /* margin: 2em 0; */
@@ -224,6 +228,8 @@
 /* } */
 
 #startBtn {
+    margin-right: 2em;
+    margin-left: 2em;
     grid-area: a;
 }
 
@@ -233,9 +239,11 @@
 
 .hide {
     display: none;
+    /* visibility: false; */
 }
 
 #scoreDisplayContainer{ 
+    grid-area: a;
     /* display:grid; */
     /* grid-template-columns: 1fr;  */
     /* grid-template-rows: auto 2fr auto ; */
@@ -294,12 +302,13 @@
 }
 
 #nextBtn {
-    grid-area: goForward;
-
+    grid-area: nb;
 }
 
 #finishBtn {
-    grid-area: goForward;
+    grid-area: fb;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 /* Begin haunt */
