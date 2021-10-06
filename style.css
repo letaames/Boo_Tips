@@ -104,9 +104,20 @@
         transform: scale(0.8);
     }
 }
-
+/* Begin form */
 .grid-item-4{
     grid-area: form;
+    text-align:center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.standardFont{
+    font-family: 'Arvo', serif;
+    color: black;
 }
 
 /* .form-card { */
@@ -126,34 +137,43 @@
 /* } */
 
 .form-container{
-    width: 60vw;
-    /* max-width: 80%; */
+    /* width: 60vw; */
+    max-width: 80%;
     background-color: #EFF1F0;
-    padding: 10px;
+    padding: 10%;
     border-radius: 5px;
     box-shadow: 0 0 10px 2px;
     text-align: center;
+    text-align:center;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
   }
 .answerGrid {
     grid-area: answers;
     display:grid;
     grid-template-columns: repeat(2, auto);
-    gap: 1em;
+    gap: 2em;
     margin: 2em 0;
 }
 
 .btn {
-    background-color: aqua;
+    background-color: #C97B54;
     border-radius: 5px;
-    border: 1px solid green;
+    border: 1px solid #C97B54;
     padding: 5px 10px;
     outline: none;
     color: white;
+    font-family: 'Arvo', serif;
+    font-size: 2vw;
+    
 }
 
 .btn:hover{
-    border-color: teal;
-    transform: scale(1.05)
+    border-color: #16242D;
+    transform: scale(1.05);
+    /* box-shadow: 0 0 5px 1px; */
 }
 
 .btn:disabled{
@@ -168,12 +188,22 @@
     opacity: 0.3;
 }
 
-.controls{
-    display:grid;
-    grid-template-areas:
-    "goBack questions goForward"
-    "goBack answers goForward"
-}
+
+/* .controls{ */
+    /* display:grid; */
+    /* grid-template-areas: */
+    /* ". start start ." */
+    /* ". goBack goBack ." */
+    ;
+    /* grid-template-columns: 1fr 2fr 2fr 1fr; */
+    /* gap: 2em; */
+    /* margin: 2em 0; */
+
+/* } */
+
+/* #startBtn { */
+    /* grid-area: start; */
+/* } */
 
 #question {
     grid-area: questions;
@@ -184,31 +214,70 @@
 }
 
 #scoreDisplayContainer{ 
-    display:grid;
-    grid-template-columns: 1fr; 
-    /* grid-template-rows: auto 1fr auto ; */
+    /* display:grid; */
+    /* grid-template-columns: 1fr;  */
+    /* grid-template-rows: auto 2fr auto ; */
     /* grid-row-gap: 1em; */
-    grid-template-areas: 
-    "intro"
-    "hauntScore"
-    "units";
+    /* grid-template-areas:  */
+    /* "intro" */
+    /* "hauntScore" */
+    /* "units"; */
+    text-align:center;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    /* overflow: auto; */
 }
 
 #intro {
-    grid-area: intro;
+    /* grid-area: intro; */
+    /* display:inline-block; */
+    text-align:center;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
 }
 
 #scoreDisplay {
-    grid-area: hauntScore;
+    /* grid-area: hauntScore; */
+    /* display:inline-block */
+    text-align:center;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #units {
-    grid-area: units;
+    /* grid-area: units; */
+    /* display:inline-block; */
+    text-align:center;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
 }
-
 .spookyFontTwo{
     font-family: 'Creepster', cursive;
     color: black;
+    font-size: 8vw;
+}
+
+.displayText{
+    font-size: 3vw;
+}
+
+#nextBtn {
+    grid-area: goForward;
+
+}
+
+#finishBtn {
+    grid-area: goForward;
 }
 
 /* Begin haunt */
@@ -237,9 +306,15 @@
     /* bottom: 0; */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     /* height: 200px; */
-    font-size: 3vw;
+    font-size: 3em;
+    text-align: center;
+    text-align:center;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
   }
 
 
@@ -288,12 +363,23 @@ body {
     background-color: #16242D;
     /* position: relative; */
     /* font-size: 25px; */
-    padding: 2em;
+    padding: 2em; 
+    /* Don't change the padding, this prevents ghost top getting cut off */
     /* padding-top: 50px; */
     /* background-color: #379AD6; */
     /* color: #222; */
     /* border: 1px solid white; */
+    text-align:center;
+    height: 100%;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
   }
+
+/* p { */
+    /* margin: 0; */
+    /* padding: 0; */
+/* } */
 
 
 
