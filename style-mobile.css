@@ -1,18 +1,4 @@
-@media only screen and (max-width: 480px) {
-    body .grid-container > #mainContent {
-        grid-template-rows: .5fr 1fr .5fr;
-        grid-template-areas: 
-        ". . . . ghost ghost ghost ghost . . . ."
-        /* ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ." */
-        "form form form form form form form form form form form form"
-        "haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt"
-    }
-
-    body .grid-container > #mainContent > .grid-item > .form-container{
-        width: 247px;
-        height: 100px;
-    }
-}
+@media (max-width: 480px) {
 .grid-container {
     background-color: #16242D;
     display:grid;
@@ -36,7 +22,7 @@
     grid-template-areas: 
         ". . . . ghost ghost ghost ghost . . . ."
         /* ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ." */
-        ". . form form form form form form form form . . "
+        ". . form form form form form form form form . ."
         "haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt"
 }
 
@@ -427,8 +413,4 @@ body {
     /* margin: 0; */
     /* padding: 0; */
 /* } */
-
-
-
-
-
+}
