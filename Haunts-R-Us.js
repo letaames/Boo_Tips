@@ -61,6 +61,7 @@ function displayRandomFace() {
     previousNum = randNum;
     console.log(previousNum)
     chosenFace = faces[randNum];
+    chosenFace.classList.remove("hide")
     chosenFace.classList.add("fade-in");
   }
 
