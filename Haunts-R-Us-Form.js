@@ -140,5 +140,5 @@ function displayHauntScore(calculatedScore) {
     });
     scoreDisplay.classList.add("fade-in");
     scoreDisplayContainer.classList.remove('hide');
-    answerGrid.classList.add('hide');
+    // answerGrid.classList.add('hide');
 }
