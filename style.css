@@ -369,7 +369,7 @@
     border: 1px solid #C97B54;
     padding: 5px 10px;
     outline: none;
-    color: white;
+    color: #16242D;
     font-family: 'Arvo', serif;
     font-size: 1em;
     
@@ -390,6 +390,7 @@
 
 .chosen{
     background-color: black;
+    color: #EFF1F0;
 }
 
 .disabled{
