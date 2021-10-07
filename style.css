@@ -151,7 +151,7 @@
     
         .grid-item-4 > #question-container{
             /* width: 247px; */
-            height: 250px;
+            height: 300px;
             /* justify-content: center;  */
             /* display: flex; */
             grid-row-gap: 1.5em;
