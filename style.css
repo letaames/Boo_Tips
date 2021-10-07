@@ -4,14 +4,31 @@
         grid-template-areas: 
         ". . . . ghost ghost ghost ghost . . . ."
         /* ". . . . ghostShadow ghostShadow ghostShadow ghostShadow . . . ." */
-        "form form form form form form form form form form form form"
+        ". form form form form form form form form form form ."
         "haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt haunt"
     }
 
-    body .grid-container > #mainContent > .grid-item > .form-container{
-        width: 247px;
-        height: 100px;
+    .grid-item-4 > #question-container{
+        /* width: 247px; */
+        height: 143px;
+        /* justify-content: center;  */
+        /* display: flex; */
+        grid-row-gap: 1em;
     }
+
+    .grid-container > #mainContent >.bigDisplay{
+        font-size: 2em;
+        height: 160px;
+    }
+
+    #scoreDisplayContainer > .displayText {
+        font-size: 4vw;
+    }
+
+    #scoreDisplayContainer >  .spookyFontTwo{
+        font-size: 8vw;
+    }
+
 }
 .grid-container {
     background-color: #16242D;
@@ -123,8 +140,8 @@
 .grid-item-4{
     grid-area: form;
     text-align:center;
-    height: 100%;
-    display: flex;
+    /* height: 100%; */
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -154,20 +171,24 @@
     /* transform: scale(1.1); */
 /* } */
 
-.form-container{
+/* .form-container{ */
     /* width: 60vw; */
-    background-color: #EFF1F0;
-    padding: 5%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 2px;
-    text-align: center;
-    text-align:center;
-    width: 100%;
+    /* background-color: #EFF1F0; */
+    /* padding: 5%; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 10px 2px; */
+    /* text-align: center; */
+    /* width: 100%; */
     /* display: flex; */
-    align-items: center;
-    /* justify-content: center; */
-  }
+    /* align-items: center; */
+    /* justify-content: center;  */
+  /* } */
+
 #question-container{
+    padding: 5%;
+    background-color: #EFF1F0;
+    box-shadow: 0 0 10px 2px;
+    border-radius: 5px;
     font-size: 3vw;
     /* padding: 5%; */
     display:grid;
@@ -182,6 +203,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    /* width: 100%; */
+    /* margin: 0 auto; */
 
 }
 .answerGrid {
@@ -410,7 +433,7 @@ body {
     background-color: #16242D;
     /* position: relative; */
     /* font-size: 25px; */
-    padding: 2em; 
+    padding: 2em;  
     /* Don't change the padding, this prevents ghost top getting cut off */
     /* padding-top: 50px; */
     /* background-color: #379AD6; */
