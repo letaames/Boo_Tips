@@ -34,12 +34,17 @@ var displayTexts = document.getElementsByClassName("displayText");
 
 
 const questions = [
-    "What is 2+2?", "What is my birthday?"
+    "Who wronged you?", 
+    "Did you get revenge during life?", 
+    "Did you ever fix what went wrong?",
+    "Are you excited to be a ghost?"
 ];
 
 const allAnswers = [
-    [4, 3, 2, 1],
-    ["June", "April", "November"]
+    ["Stranger","Friend", "Significant Other","Family Member"],
+    ["Yes", "Not Enough", "I don't know","Nope"],
+    ["Yes", "No", "I don't know", "It can’t be fixed"],
+    ["What’s a ghost?", "Nope", "Absolutely"] 
 ];
 
 function startGame() {
@@ -129,8 +134,10 @@ function endGame() {
 
 function calculateScore() {
     calculatedScore = 0
-    calculatedScore = calculatedScore + finalAnswerList[0] * 2;
-    calculatedScore = calculatedScore + finalAnswerList[1] + 2;
+    calculatedScore = calculatedScore + (1 + Math.floor(Math.random()*finalAnswerList[0]));
+    calculatedScore = calculatedScore + (finalAnswerList[1] * 2);
+    calculatedScore = calculatedScore + (finalAnswerList[2] * 2) +1;
+    calculatedScore = calculatedScore + (finalAnswerList[3] * 2) - 1;
     displayHauntScore(calculatedScore);
 }
 function displayHauntScore(calculatedScore) {
