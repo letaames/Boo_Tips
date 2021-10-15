@@ -1,3 +1,82 @@
+@media only screen and (max-width: 480px) {
+
+    body #about-container {
+        font-size: 1em;
+        padding-left: 10vw;
+        padding-right: 10vw; 
+        padding-top: 2vh;
+        text-align: left;
+    }
+
+    header > ul>  #title {
+        font-size: 2em;
+        padding-top: 2vh;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 480px) {
+    body #about-container {
+        font-size: 1em;
+        padding-left: 15vw;
+        padding-right: 15vw; 
+        padding-top: 2vh;
+        text-align: left;
+    }
+
+    header > ul>  #title {
+        font-size: 2em;
+        padding-top: 2vh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body #about-container {
+        font-size: 1.5em;
+        padding-left: 17vw;
+        padding-right: 17vw; 
+        padding-top: 2vh;
+        text-align: left;
+    }
+
+    header > ul>  #title {
+        font-size: 2em;
+        padding-top: 2vh;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body #about-container {
+        font-size: 1.5em;
+        padding-left: 17vw;
+        padding-right: 17vw; 
+        padding-top: 5vh;
+        text-align: left;
+    }
+
+    header > ul>  #title {
+        font-size: 2em;
+        padding-top: 5vh;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body #about-container {
+        font-size: 1.5em;
+        padding-left: 25vw;
+        padding-right: 25vw; 
+        padding-top: 5vh;
+        text-align: left;
+    }
+
+    header > ul>  #title {
+        font-size: 2em;
+        padding-top: 7vh;
+    }
+}
+
 body {
     background-color: #16242D;    
     margin: 0;
