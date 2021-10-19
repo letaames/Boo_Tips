@@ -565,13 +565,15 @@
     padding-top:2em;
 }
 
-.gravestone {
+.gravestone:focus { outline: none; } 
 
-}
+
 
 .gravestone:hover {
   transform: translate(0, -4px);
 }
+
+
 
 .grid-item-7{
     grid-area: main;
