@@ -48,7 +48,6 @@ const allAnswers = [
 ];
 
 function startGame() {
-    console.log('click')
     startButton.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     gameStarted = true;
@@ -65,7 +64,7 @@ function setNextQuestion() {
 
         for (var z = 0; z < answerList.length; z++) {
             answerButtons[z].classList.remove('hide')
-            answerButtons[z].addEventListener('click', (event) => collectAnswer(answerList.length, event.target.id));
+            answerButtons[z].addEventListener('click', (event) => collectAnswer(answerList.length, event.target.id, event));
             answerButtons[z].innerText = answerList[z];
             nextButton.classList.add('hide');
         }
@@ -91,9 +90,9 @@ function goToNext() {
 
 
 
-function collectAnswer(answerListLength, buttonID) {
+function collectAnswer(answerListLength, buttonID,event) {
+    event.preventDefault();
     buttonInteger = Number(buttonID.split("-")[1]);
-    console.log(buttonInteger)
     for (var i = 0; i < answerListLength; i++) {
         if (i == buttonInteger) {
             answerButtons[i].classList.add('chosen');
@@ -121,7 +120,8 @@ function moveOn() {
 }
 
 
-function endGame() {
+function endGame(event) {
+        event.preventDefault();
         selectedButton = Number(document.getElementsByClassName('chosen')[0].id.split("-")[1]);
         finalAnswerList.push(selectedButton);
         gameStarted = false;
