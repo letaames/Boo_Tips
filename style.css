@@ -256,6 +256,8 @@
     /* z-index: -1 */
 }
 
+#actualGhost:focus { outline: none; }
+
 @keyframes floaty {
     0%,
     100% {
