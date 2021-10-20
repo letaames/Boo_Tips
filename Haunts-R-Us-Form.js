@@ -24,6 +24,8 @@ var finalAnswerList = [];
 
 var answerButtons = document.getElementsByClassName("answerButton");
 
+var answerGrid = document.getElementById("answers");
+
 let calculatedScore = 0;
 
 var scoreDisplay = document.getElementById("scoreDisplay");
@@ -61,9 +63,11 @@ function setNextQuestion() {
         questionElement.classList.add("fade-in");
         answerList = allAnswers[currentQuestion];
         questionElement.classList.remove("hide");
+        answerGrid.classList.remove('hide');
 
         for (var z = 0; z < answerList.length; z++) {
-            answerButtons[z].classList.remove('hide')
+            
+            answerButtons[z].classList.remove('hide');
             answerButtons[z].addEventListener('click', (event) => collectAnswer(answerList.length, event.target.id, event));
             answerButtons[z].innerText = answerList[z];
             nextButton.classList.add('hide');
@@ -148,5 +152,5 @@ function displayHauntScore(calculatedScore) {
     });
     scoreDisplay.classList.add("fade-in");
     scoreDisplayContainer.classList.remove('hide');
-    // answerGrid.classList.add('hide');
+    answerGrid.classList.add('hide');
 }
