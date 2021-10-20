@@ -62,12 +62,14 @@ function setNextQuestion() {
         questionElement.innerText = questions[currentQuestion];
         questionElement.classList.add("fade-in");
         questionElement.focus();
+        questionElement.ariaLabel = `Question number ${currentQuestion+1} ${questions[currentQuestion]}`
         answerList = allAnswers[currentQuestion];
         questionElement.classList.remove("hide");
         answerGrid.classList.remove('hide');
 
         for (var z = 0; z < answerList.length; z++) {
             answerButtons[z].classList.remove('hide');
+            answerGrid.ariaLabel = `Please select one of the following ${answerList.length} answers`;
             answerButtons[z].addEventListener('click', (event) => collectAnswer(answerList.length, event.target.id, event));
             answerButtons[z].innerText = answerList[z];
             nextButton.classList.add('hide');
