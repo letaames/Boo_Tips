@@ -256,7 +256,7 @@
     /* z-index: -1 */
 }
 
-#actualGhost:focus { outline: none; }
+/* #actualGhost:focus { outline: none; } */
 
 @keyframes floaty {
     0%,
@@ -565,7 +565,11 @@
     padding-top:2em;
 }
 
-.gravestone:focus { outline: none; } 
+/* .gravestone:focus { outline: none; }  */
+
+/* .gravestone:focus:not(:focus-visible) { */
+
+/* } */
 
 
 
@@ -616,6 +620,15 @@ body {
     margin: 0;
 	padding: 0;
 }
+
+:focus {
+    outline: #08f auto 2px;
+  }
+  
+  /* When mouse is detected, ALL focused elements have outline removed. */
+body.using-mouse :focus {
+    outline: none;
+  }
 
 .grid-item {
     background-color: #16242D;
