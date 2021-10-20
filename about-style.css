@@ -8,7 +8,7 @@
         text-align: left;
     }
 
-    header > ul>  #title {
+    body #about-container >  #title {
         font-size: 2em;
         padding-top: 2vh;
     }
@@ -26,7 +26,7 @@
         text-align: left;
     }
 
-    header > ul>  #title {
+    body #about-container >  #title {
         font-size: 2em;
         padding-top: 2vh;
     }
@@ -41,7 +41,7 @@
         text-align: left;
     }
 
-    header > ul>  #title {
+    body #about-container >  #title {
         font-size: 2em;
         padding-top: 2vh;
     }
@@ -56,7 +56,7 @@
         text-align: left;
     }
 
-    header > ul>  #title {
+    body #about-container >  #title {
         font-size: 2em;
         padding-top: 5vh;
     }
@@ -71,7 +71,7 @@
         text-align: left;
     }
 
-    header > ul>  #title {
+    body #about-container >  #title {
         font-size: 2em;
         padding-top: 7vh;
     }
@@ -126,6 +126,10 @@ ul {
     padding-top: 10vh;
     text-align: left;
 
+}
+
+h2 {
+    text-align: center;
 }
 
 
