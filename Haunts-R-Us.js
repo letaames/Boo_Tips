@@ -50,6 +50,8 @@ function displayRandomHaunt() {
     let text = document.getElementById("hauntDisplay");
     text.classList.add("fade-in");
     text.innerText = choosenHaunt;
+    text.tabIndex = 0;
+    text.focus();
     isReady = false
     setTimeout(function () {
         text.classList.remove("fade-in");
