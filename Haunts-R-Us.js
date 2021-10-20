@@ -13,11 +13,14 @@ var gravestones = document.getElementsByClassName("gravestone");
 for (var i = 0; i < gravestones.length; i++) {
     gravestones[i].addEventListener('click', displayRandomHaunt, false);
 }
+for (var i = 0; i < gravestones.length; i++) {
+    gravestones[i].addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {displayRandomHaunt();}}, false);
+}
 
 actualGhost.addEventListener('click', displayRandomFace, false);
 actualGhost.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-      console.log("enter pressed");
       displayRandomFace();
     }}, false);
 
