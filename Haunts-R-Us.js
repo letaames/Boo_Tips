@@ -55,6 +55,7 @@ function displayRandomHaunt() {
     isReady = false
     setTimeout(function () {
         text.classList.remove("fade-in");
+        text.tabIndex = -1;
         isReady = true;
       },choosenHaunt.length * 100); // Set time out to three seconds to account for the second the element fades in
   }
