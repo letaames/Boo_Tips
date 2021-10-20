@@ -67,7 +67,6 @@ function setNextQuestion() {
         answerGrid.classList.remove('hide');
 
         for (var z = 0; z < answerList.length; z++) {
-            
             answerButtons[z].classList.remove('hide');
             answerButtons[z].addEventListener('click', (event) => collectAnswer(answerList.length, event.target.id, event));
             answerButtons[z].innerText = answerList[z];
