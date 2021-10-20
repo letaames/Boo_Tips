@@ -44,6 +44,8 @@ function displayRandomHaunt() {
     'Mess up their hair when they are running late',
     'Make them always walk upwind',
     'Whisper their secrets to their friends',
+    'Mess up their research data',
+    'Make them see a scary hairy monster in the mirror'
 ]
     let randNum = Math.floor(Math.random() * hauntingTypes.length);
     let choosenHaunt = hauntingTypes[randNum]
