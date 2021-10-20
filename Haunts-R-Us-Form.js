@@ -61,6 +61,7 @@ function setNextQuestion() {
     if (currentQuestion < questions.length) {
         questionElement.innerText = questions[currentQuestion];
         questionElement.classList.add("fade-in");
+        questionElement.focus();
         answerList = allAnswers[currentQuestion];
         questionElement.classList.remove("hide");
         answerGrid.classList.remove('hide');
@@ -152,5 +153,6 @@ function displayHauntScore(calculatedScore) {
     });
     scoreDisplay.classList.add("fade-in");
     scoreDisplayContainer.classList.remove('hide');
+    scoreDisplayContainer.focus();
     answerGrid.classList.add('hide');
 }
