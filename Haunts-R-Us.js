@@ -15,6 +15,11 @@ for (var i = 0; i < gravestones.length; i++) {
 }
 
 actualGhost.addEventListener('click', displayRandomFace, false);
+actualGhost.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      console.log("enter pressed");
+      displayRandomFace();
+    }}, false);
 
 function displayRandomHaunt() {
     if (!isReady) return
