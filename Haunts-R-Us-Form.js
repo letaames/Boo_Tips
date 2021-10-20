@@ -71,7 +71,8 @@ function setNextQuestion() {
     }
 }
 
-function goToNext() {
+function goToNext(event) {
+    event.preventDefault();
     selectedButton = Number(document.getElementsByClassName('chosen')[0].id.split("-")[1]);
     finalAnswerList.push(selectedButton);
     currentQuestion++;
