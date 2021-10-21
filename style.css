@@ -254,6 +254,7 @@
     transform:translateY(5px);
     animation: floaty 2s infinite ease-in-out;
     /* z-index: -1 */
+    cursor: pointer;
 }
 
 /* #actualGhost:focus { outline: none; } */
@@ -390,6 +391,7 @@
     color: #16242D;
     font-family: 'Arvo', serif;
     font-size: 1em;
+    cursor: pointer;
     
 }
 
@@ -572,6 +574,7 @@
 
 .gravestone:hover {
   transform: translate(0, -4px);
+  cursor: pointer;
 }
 
 
