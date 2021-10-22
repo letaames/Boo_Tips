@@ -8,7 +8,7 @@ var actualGhost = document.getElementById("actualGhost");
 
 var gravestones = document.getElementsByClassName("gravestone");
 
-
+var smileNum = 0;
 
 for (var i = 0; i < gravestones.length; i++) {
     gravestones[i].addEventListener('click', displayRandomHaunt, false);
@@ -76,21 +76,32 @@ function displayRandomFace() {
         randNum=Math.floor(Math.random() * faces.length)
     }
     previousNum = randNum;
-    console.log(previousNum)
     chosenFace = faces[randNum];
-    chosenFace.classList.remove("hide")
+    chosenFace.classList.remove("hide");
     chosenFace.classList.add("fade-in");
+    if (randNum === 7){
+        if (smileNum === 2){
+            offerHappyOpt()
+            smileNum = 0;
+            console.log("into offer")
+        }
+        else {
+            smileNum+=1;
+        }
+    }
   };
 
 function offerHappyOpt() {
+    console.log("offer function");
     bonusLink = document.getElementById("bonus");
     bonusLink.classList.remove("hide");
     bonusLink.classList.add("fade-in");
-    document.onclick=function(){
-        bonusLink.classList.add("fade-out");
-        bonusLink.classList.add("hide");   
-        bonusLink.tabIndex = -1;
-      };
+    bonusLink.
+    // document.onclick=function(){
+        // bonusLink.classList.add("fade-out");
+        // bonusLink.classList.add("hide");   
+        // bonusLink.tabIndex = -1;
+    //   };
     setTimeout(function () {
         bonusLink.classList.add("fade-out");
         bonusLink.classList.add("hide"); 

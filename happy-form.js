@@ -129,6 +129,7 @@ function moveOn() {
 
 function endGame(event) {
         event.preventDefault();
+        selectedButton = Number(document.getElementsByClassName('chosen')[0].id.split("-")[1]);
         if (selectedButton === 2) {
             window.location.replace("https://boo.tips");
         }
