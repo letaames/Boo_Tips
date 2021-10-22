@@ -26,33 +26,21 @@ actualGhost.addEventListener('keypress', function (e) {
 
 function displayRandomHaunt() {
     if (!isReady) return
-    let hauntingTypes = ['Visit them the night before Christmas and show them their wrongdoings',
-    'Create a cold spot in their house',
-    'Flick their lights on and off',
-    'Move their car keys',
-    'Moan throughout the night',
-    'Scream randomly before they take a sip of water',
-    'Make loud fart noises when they sit down at important events',
-    'Eat the last of their favorite snacks',
-    'Sign them up for an MLM',
-    'Cover them in ants while they sleep',
-    'Make blood pour out of their showerhead',
-    'Write TV spoilers in the fog from their shower',
-    'Levitate their items',
-    'Levitate them',
-    'Levitate their significant other',
-    'Mess up their hair when they are running late',
-    'Make them always walk upwind',
-    'Whisper their secrets to their friends',
-    'Mess up their research data',
-    'Make them see a scary hairy monster in the mirror'
+    let hauntingTypes = ['Eat bites of their leftovers',
+    'Go backstage at Coachella',
+    'Manifest as butterflies and visit them',
+    'Play their favorite song on the radio',
+    'Move their items to their rightful locations',
+    'Write sweet notes in the fog from their shower',
+    "Sing to them",
+    "Be their guardian angel",
 ]
     let randNum = Math.floor(Math.random() * hauntingTypes.length);
     while (randNum === previousNum) {
         randNum=Math.floor(Math.random() * hauntingTypes.length)
     }
     previousNum = randNum;
-    let choosenHaunt = hauntingTypes[randNum]
+    let choosenHaunt = hauntingTypes[randNum];
     let text = document.getElementById("hauntDisplay");
     text.classList.add("fade-in");
     text.innerText = choosenHaunt;
@@ -76,27 +64,9 @@ function displayRandomFace() {
         randNum=Math.floor(Math.random() * faces.length)
     }
     previousNum = randNum;
-    console.log(previousNum)
     chosenFace = faces[randNum];
     chosenFace.classList.remove("hide")
     chosenFace.classList.add("fade-in");
   };
-
-function offerHappyOpt() {
-    bonusLink = document.getElementById("bonus");
-    bonusLink.classList.remove("hide");
-    bonusLink.classList.add("fade-in");
-    document.onclick=function(){
-        bonusLink.classList.add("fade-out");
-        bonusLink.classList.add("hide");   
-        bonusLink.tabIndex = -1;
-      };
-    setTimeout(function () {
-        bonusLink.classList.add("fade-out");
-        bonusLink.classList.add("hide"); 
-        bonusLink.tabIndex = -1;
-      },10000);
-};
-
 
 
