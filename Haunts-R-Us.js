@@ -96,7 +96,7 @@ function offerHappyOpt() {
     bonusLink = document.getElementById("bonus");
     bonusLink.classList.remove("hide");
     bonusLink.classList.add("fade-in");
-    bonusLink.
+    bonusLink.focus();
     // document.onclick=function(){
         // bonusLink.classList.add("fade-out");
         // bonusLink.classList.add("hide");   
@@ -106,7 +106,7 @@ function offerHappyOpt() {
         bonusLink.classList.add("fade-out");
         bonusLink.classList.add("hide"); 
         bonusLink.tabIndex = -1;
-      },10000);
+      },30000);
 };
 
 
