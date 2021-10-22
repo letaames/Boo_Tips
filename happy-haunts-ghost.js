@@ -27,7 +27,7 @@ actualGhost.addEventListener('keypress', function (e) {
 function displayRandomHaunt() {
     if (!isReady) return
     let hauntingTypes = ['Eat bites of their leftovers',
-    'Go backstage at Coachella',
+    'Live your best afterlife! Go backstage at a music festival',
     'Manifest as butterflies and visit them',
     'Play their favorite song on the radio',
     'Move their items to their rightful locations',
