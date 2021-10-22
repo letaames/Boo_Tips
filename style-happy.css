@@ -191,7 +191,7 @@
 
 
 .grid-container {
-    background-color: #16242D;
+    background-color: #E0D2E6;
     display:grid;
     grid-template-columns: 1fr; 
     /* grid-template-rows: auto 1fr auto ; */
@@ -315,7 +315,7 @@
 } */
 .standardFont{
     font-family: 'Arvo', serif;
-    color: black;
+    color: #3B104D;
 }
 
 /* .form-card { */
@@ -383,12 +383,12 @@
 }
 
 .btn {
-    background-color: #C97B54;
+    background-color: #D96800;
     border-radius: 5px;
-    border: 1px solid #C97B54;
+    border: 1px solid #D96800;
     padding: 5px 10px;
     outline: none;
-    color: #16242D;
+    color: #3B104D;
     font-family: 'Arvo', serif;
     font-size: 1em;
     cursor: pointer;
@@ -396,7 +396,7 @@
 }
 
 .btn:hover{
-    border-color: #16242D;
+    border-color: #3B104D;
     transform: scale(1.05);
     /* box-shadow: 0 0 5px 1px; */
 }
@@ -493,7 +493,7 @@
 }
 .spookyFontTwo{
     font-family: 'Creepster', cursive;
-    color: black;
+    color: #3B104D;
     font-size: 8vw;
 }
 
@@ -520,7 +520,7 @@
 
 #haunt-instructions {
     font-family: 'Arvo', serif;
-    color: white;
+    color: #3B104D;
     font-size: 2em;
 }
 
@@ -600,7 +600,7 @@ html {
 
 #about {
     font-size: 1em;
-    color: white;
+    color: #3B104D;
     font-family: 'Arvo', serif;
     text-align: right;
     padding-right: 5vw;
@@ -608,11 +608,11 @@ html {
 
 a {
     text-decoration: none;
-    color:white;
+    color:#3B104D;
 }
 
 a:visited {
-    color: white;
+    color: #3B104D;
 }
 
 body {
@@ -631,7 +631,7 @@ body.using-mouse :focus {
   }
 
 .grid-item {
-    background-color: #16242D;
+    background-color: #E0D2E6;
     /* position: relative; */
     /* font-size: 25px; */
     padding: 2em;  
@@ -639,7 +639,7 @@ body.using-mouse :focus {
     /* padding-top: 50px; */
     /* background-color: #379AD6; */
     /* color: #222; */
-    /* border: 1px solid white; */
+    /* border: 1px solid 3B104D; */
     text-align:center;
     height: 100%;
     /* display: flex; */
@@ -655,7 +655,7 @@ body.using-mouse :focus {
 #bonus {
     text-align: center;
     font-size: 1em;
-    color: white;
+    color: #3B104D;
     font-family: 'Arvo', serif;
 }
 
@@ -668,9 +668,3 @@ body.using-mouse :focus {
     opacity: 0;
     transition: 1s;
 }
-
-
-
-
-
-

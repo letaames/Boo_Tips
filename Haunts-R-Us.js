@@ -76,7 +76,23 @@ function displayRandomFace() {
     chosenFace = faces[randNum];
     chosenFace.classList.remove("hide")
     chosenFace.classList.add("fade-in");
-  }
+  };
+
+function offerHappyOpt() {
+    bonusLink = document.getElementById("bonus");
+    bonusLink.classList.remove("hide");
+    bonusLink.classList.add("fade-in");
+    document.onclick=function(){
+        bonusLink.classList.add("fade-out");
+        bonusLink.classList.add("hide");   
+        bonusLink.tabIndex = -1;
+      };
+    setTimeout(function () {
+        bonusLink.classList.add("fade-out");
+        bonusLink.classList.add("hide"); 
+        bonusLink.tabIndex = -1;
+      },10000);
+};
 
 
 
